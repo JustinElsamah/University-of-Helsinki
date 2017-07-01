@@ -1,0 +1,24 @@
+
+import java.util.*;
+
+public class WordsInReverseOrder {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        ArrayList<String> words = new ArrayList<String>();
+        String temp;
+        while (true) {
+            System.out.println("Type a word: ");
+            temp = reader.nextLine();
+            if (temp.isEmpty()) {
+                Collections.reverse(words);
+                break;
+            }
+            words.add(temp);
+        }
+        for(String word: words){
+            System.out.println(word);
+        }
+
+    }
+}
